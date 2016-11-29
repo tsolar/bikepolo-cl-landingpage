@@ -17,6 +17,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
+    <!-- main css -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="navbar-fixed-top.css" rel="stylesheet">
 
@@ -27,11 +30,11 @@
     <![endif]-->
   </head>
 
-  <body data-spy="scroll" data-target=".navbar-fixed-top">
+  <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="50">
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top" data-scroll-header>
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -45,6 +48,7 @@
           <ul class="nav navbar-nav">
             <li><a data-scroll href="#">Home</a></li>
             <li><a data-scroll href="#about">About</a></li>
+            <li><a data-scroll href="#rules">Rules</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -68,54 +72,65 @@
       </div>
     </nav>
 
-    <div id="navdivs">
 
-      <div id="about" class="container">
-
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1>about</h1>
-          <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-          <p>To see the difference between static and fixed top navbars, just scroll.</p>
+    <div class="container-fluid main">
+      <div class="row">
+        <div id="about" class="col-xs-12 content">
           <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+            hasdkahsd kha dkhas dka skd askd kas dk askdask detshadkash dkhas dkh askdh k hdr
+            sajdkasdhkajh sdkasd
+            sajdhkjasdh kjsh dkash d
+            dhaksjdh kash dkhas dk
           </p>
         </div>
+      </div>
 
-
-      </div> <!-- /container -->
-
-      <div id="contact" class="container">
-
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1>contact</h1>
-          <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-          <p>To see the difference between static and fixed top navbars, just scroll.</p>
+      <div class="row">
+        <div id="rules" class="col-xs-12 content">
           <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+            hasdkahsd kha dkhas dka skd askd kas dk askdask detshadkash dkhas dkh askdh k hdr
+            sajdkasdhkajh sdkasd
+            sajdhkjasdh kjsh dkash d
+            dhaksjdh kash dkhas dk
           </p>
         </div>
+      </div>
 
-
-      </div> <!-- /container -->
+      <div class="row">
+        <div id="contact" class="col-xs-12 content">
+          <p>
+            hasdkahsd kha dkhas dka skd askd kas dk askdask detshadkash dkhas dkh askdh k hdr
+            sajdkasdhkajh sdkasd
+            sajdhkjasdh kjsh dkash d
+            dhaksjdh kash dkhas dk
+          </p>
+        </div>
+      </div>
     </div>
-
 
     <!-- Bootstrap core JavaScript
          ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="dist/js/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.scrollTo.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="dist/js/smooth-scroll-min.js"></script>
+    <!-- this fixes navbar offset -->
     <script>
-     smoothScroll.init();
+     var navOffset = $('.navbar').height();
+     $('.nav li > a').click(function(){
+       var offset = navOffset * -1;
+       var href = $(this).attr('href');
+       var target = href === '#' ? 0 : href;
+       $('body').scrollTo(target, {duration:500, offset: offset});
+     });
+
     </script>
   </body>
 </html>
