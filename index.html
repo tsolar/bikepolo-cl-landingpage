@@ -51,7 +51,7 @@
             <li><a data-scroll href="#rules">Rules</a></li>
             <li><a data-scroll href="#courts">Courts</a></li>
             <li><a data-scroll href="#contact">Contact</a></li>
-            <li class="dropdown">
+            <!-- li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
@@ -62,7 +62,7 @@
                 <li><a href="#">Separated link</a></li>
                 <li><a href="#">One more separated link</a></li>
               </ul>
-            </li>
+            </li -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="../navbar/">Default</a></li> -->
@@ -115,18 +115,32 @@
 
       <div class="row">
         <div id="courts" class="col-xs-12 content">
-          <p>
-            Canchas! dhaksjdh kash dkhas dk
-          </p>
+          <h2>Dónde jugamos</h2>
+
+          <div className="court">
+            <h3>Santiago</h3>
+            <p className="address">
+              Plaza Bogotá. Sierra Bella esquina Ñuble
+            </p>
+            <div class="map">
+              <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9ByPtMqqeOOs6sVj_NYXWMsG9RJanEq8&q=Plaza+Bogota+Santiago+Chile" allowfullscreen></iframe>
+              <!-- <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-70.6379806995392%2C-33.47027380861435%2C-70.62976241111757%2C-33.4647248198694&amp;layer=mapnik&amp;marker=-33.467499358650024%2C-70.63387155532837" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/?mlat=-33.46750&amp;mlon=-70.63387#map=17/-33.46750/-70.63387">View Larger Map</a></small> -->
+              <a href="https://www.google.com/maps/dir//Plaza+Bogot%C3%A1+-+Lira+1726,+Santiago,+Regi%C3%B3n+Metropolitana,+Chile/@-33.4676708,-70.6353748,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x9662c542d50f7575:0x4d9c7b4caf695859!2m2!1d-70.6337277!2d-33.4672943">Indicaciones</a>
+            </div>
+          </div>
+
+          <div className="notice">
+            <p>
+              Si sabes de otra cancha, si juegas con un grupo en cualquier parte de Chile, <a class="contact-link" href="#">avísanos!</a>
+            </p>
+          </div>
         </div>
       </div>
+
       <div class="row">
         <div id="contact" class="col-xs-12 content">
           <p>
-            hasdkahsd kha dkhas dka skd askd kas dk askdask detshadkash dkhas dkh askdh k hdr
-            sajdkasdhkajh sdkasd
-            sajdhkjasdh kjsh dkash d
-            dhaksjdh kash dkhas dk
+            No dudes en contactarnos al email <a href="mailto:contacto@bikepolo.cl">contacto@bikepolo.cl</a>, o en nuestra <a target="_blank" href="https://www.facebook.com/chilebikepolo/">página de Facebook</a>
           </p>
         </div>
       </div>
@@ -154,7 +168,12 @@
        var target = href === '#' ? 0 : href;
        $('body').scrollTo(target, {duration:500, offset: offset});
      });
-
+    </script>
+    <script>
+     $('.contact-link').on('click', function(e){
+       e.preventDefault();
+       $('.navbar a[href="#contact"]').click();
+     });
     </script>
   </body>
 </html>
