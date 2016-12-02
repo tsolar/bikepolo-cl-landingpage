@@ -1,33 +1,57 @@
 #about {
-    background-color: red;
+  background-color: #FFDA33;
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+    text-shadow: 1px 1px 1px #fff;
+  }
+
+  p {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .buttons {
+    padding-top: 30px;
+  }
 }
 
 #contact {
-    background-color: green;
+  background-color: green;
+  color: #eee;
+
+  p {
+    font-size: 20px;
+  }
 }
 
 #courts {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
+
+  .court {
+    margin-bottom: 30px;
+  }
 }
 body {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .content {
-    min-height: 200px;
-    padding: 20px
+  min-height: 200px;
+  padding: 20px
 }
 
 a {
+  color: #ccc;
+  &:hover {
     color: #ccc;
-    &:hover {
-        color: #ccc;
-    }
+  }
 }
 
 .map {
-    iframe {
-        //pointer-events: none;
-    }
+  iframe {
+    //pointer-events: none;
+  }
 }

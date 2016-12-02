@@ -1,12 +1,27 @@
 #about {
-  background-color: red; }
+  background-color: #FFDA33; }
+  #about h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+    text-shadow: 1px 1px 1px #fff; }
+  #about p {
+    text-align: center;
+    font-size: 24px; }
+  #about .buttons {
+    padding-top: 30px; }
 
 #contact {
-  background-color: green; }
+  background-color: green;
+  color: #eee; }
+  #contact p {
+    font-size: 20px; }
 
 #courts {
   background-color: #333;
   color: #fff; }
+  #courts .court {
+    margin-bottom: 30px; }
 
 body {
   padding-top: 50px; }
