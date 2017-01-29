@@ -1,10 +1,24 @@
 #about {
-  background-color: #FFDA33; }
+  color: white;
+  background-image: url("../img/background.jpg");
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: 50% 25%;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn't move when
+   the content's height is greater than the image's height */
+  /* This is what makes the background image rescale based
+   on the container's size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+   while the background image is loading */
+  background-color: #464646; }
+  #about .__with-shadow {
+    text-shadow: 1px 1px 1px #000; }
   #about h2 {
     text-align: center;
     font-weight: bold;
-    font-size: 64px;
-    text-shadow: 1px 1px 1px #fff; }
+    font-size: 64px; }
   #about p {
     text-align: center;
     font-size: 24px; }

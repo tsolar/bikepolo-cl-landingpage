@@ -1,20 +1,43 @@
 #about {
-  background-color: #FFDA33;
-  h2 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 64px;
-    text-shadow: 1px 1px 1px #fff;
-  }
+    color: white;
+    background-image: url('../img/background.jpg');
 
-  p {
-    text-align: center;
-    font-size: 24px;
-  }
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: 50% 25%;
 
-  .buttons {
-    padding-top: 30px;
-  }
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+    //background-attachment: fixed;
+
+    /* This is what makes the background image rescale based
+     on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+     while the background image is loading */
+    background-color: #464646;
+
+    .__with-shadow {
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 64px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .buttons {
+        padding-top: 30px;
+    }
 }
 
 #contact {
