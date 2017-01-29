@@ -38,4 +38,9 @@ a {
   a:hover {
     color: #ccc; }
 
+.social {
+  margin: 0 0 20px 0; }
+  .social a {
+    text-decoration: none; }
+
 /*# sourceMappingURL=main.css.map */
