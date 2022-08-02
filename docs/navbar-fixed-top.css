@@ -2,3 +2,9 @@ body {
     //min-height: 2000px;
     //padding-top: 70px;
 }
+
+.banner {
+  background-color: #8b0000;
+  color: #ffffff;
+  padding: 20px;
+}
